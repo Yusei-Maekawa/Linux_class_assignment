@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #667eea;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* プロフィールセクション */
+.profile-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.profile-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #764ba2;
+}
+
+.profile-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-card p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* APIセクション */
+.api-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.api-section h2 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.api-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #555;
+}
+
+.input-group input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.big-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.result-box {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 100px;
+  border: 2px solid #e9ecef;
+}
+
+.placeholder-text {
+  color: #999;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 天気表示用 */
+.weather-info {
+  text-align: center;
+}
+
+.weather-info .city-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.weather-info .temp {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.weather-info .description {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+
+.weather-info .details {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  color: #888;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* ポケモン表示用 */
+.pokemon-info {
+  text-align: center;
+}
+
+.pokemon-info img {
+  width: 150px;
+  height: 150px;
+  image-rendering: pixelated;
+}
+
+.pokemon-info .pokemon-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #333;
+}
+
+.pokemon-info .pokemon-types {
+  margin: 1rem 0;
+}
+
+.pokemon-info .type-badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  margin: 0 0.25rem;
+  font-size: 0.9rem;
+}
+
+.pokemon-info .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pokemon-info .stat-item {
+  background: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.pokemon-info .stat-name {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.pokemon-info .stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+/* 猫画像用 */
+.cat-image {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ジョーク表示用 */
+.joke-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.joke-setup {
+  font-weight: 600;
+  color: #333;
+}
+
+.joke-delivery {
+  color: #667eea;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* 日本語翻訳表示用スタイルを追加 */
+.joke-japanese {
+  color: #764ba2;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f8f4ff;
+  border-radius: 6px;
+  border-left: 3px solid #764ba2;
+}
+
+/* エラー表示 */
+.error {
+  color: #dc3545;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ローディング */
+.loading {
+  text-align: center;
+  color: #667eea;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-group input {
+    min-width: 100%;
+  }
+
+  .pokemon-info .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
