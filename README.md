@@ -2,6 +2,11 @@
 
 Linux サーバ構築演習 課題9 - Web API を使った Web アプリケーション
 
+## 使用技術
+・v0
+・HTML/CSS
+・JavaScript
+
 ## 概要
 
 このサイトでは4つの異なる Web API を使用して、API の基本的な使い方を学習できます。
